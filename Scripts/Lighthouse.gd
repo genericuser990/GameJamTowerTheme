@@ -12,10 +12,11 @@ export var lightAngle := 30 # Maybe should have a better name for this
 func _ready():
 	enableRays()
 	rayLeft.set_rotation_degrees(lightAngle / 2)
-	rayRight.set_rotation_degrees(-lightAngle / 2)	
+	rayRight.set_rotation_degrees(-lightAngle / 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	# Check ray collision with bodies
 	if lineOfSight.is_colliding():
 		print("Is colliding")
 
@@ -29,5 +30,6 @@ func followMonster(monsterPos: Vector2):
 	var dispVec = monsterPos - position
 	lineOfSight.set_cast_to(dispVec.normalized() * rayLength)
 	
+	# set_cast_to does not change rotation
 	rayLeft.set_cast_to(dispVec.normalized() * rayLength)
-	rayRight.set_cast_to(dispVec.normalized() * rayLength)	
+	rayRight.set_cast_to(dispVec.normalized() * rayLength)
