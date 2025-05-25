@@ -1,16 +1,21 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scripts/StartScreen.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/SceneButton.gd" type="Script" id=1]
 
 [node name="StartScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+transitionScene = "res://Scenes/ui/Menu.tscn"
 
-[node name="Label" type="Label" parent="."]
-margin_right = 76.0
-margin_bottom = 14.0
-text = "start screen"
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 10.0
+margin_right = -17.0
+margin_bottom = -10.0
+color = Color( 0.164706, 0.262745, 0.301961, 1 )
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.5

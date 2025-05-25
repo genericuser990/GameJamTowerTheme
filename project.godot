@@ -69,4 +69,5 @@ common/physics_interpolation=true
 
 [rendering]
 
-environment/default_environment="res://Sprites/default_env.tres"
+environment/default_clear_color=Color( 0.113725, 0.145098, 0.180392, 1 )
+environment/default_environment="res://ThemesFonts/default_env.tres"
