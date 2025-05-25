@@ -9,5 +9,5 @@ onready var label5 := $Label5
 func _ready():
 	Global.setDebugControl(self)
 
-func _process(delta):
-	label1.text = "Monster found :" + str(get_parent().find_node("Lighthouse").monsterFound)
+# func _process(delta):
+	# label1.text = "Monster found :" + str(get_parent().find_node("Lighthouse").monsterFound)

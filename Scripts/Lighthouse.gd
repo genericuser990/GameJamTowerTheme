@@ -18,9 +18,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # func _physics_process(delta):
-	# Check ray collision with bodies
-	# if lineOfSight.is_colliding():
-		# print("Is colliding")
+	# pass
 
 func enableRays():
 	lineOfSight.enabled = true
