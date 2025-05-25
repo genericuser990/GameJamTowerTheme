@@ -1,7 +1,6 @@
 extends Node
 
 
-=======
 signal restartLevel
 signal nextLevel
 
@@ -49,4 +48,3 @@ func lightFollow():
 				lighthouse.monsterFound = true
 				undetected = false
 				
->>>>>>> ecd5b56aa0f3a789f96c685d33054257b0e6ea42
