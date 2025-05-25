@@ -2,10 +2,11 @@ extends KinematicBody2D
 
 export var speed := 100
 var vel = Vector2.ZERO
+var screenSize
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	screenSize = get_viewport_rect().size
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,3 +16,6 @@ func _physics_process(delta):
 	vel = vel.normalized() * speed
 	
 	move_and_slide(vel)
+	# Prevent moving offscreen
+	position.x = clamp(position.x, 5, screenSize.x - 5)
+	position.y = clamp(position.y, 5, screenSize.y - 5)
