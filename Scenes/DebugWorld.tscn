@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/DebugControl.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/DebugControl.gd" type="Script" id=3]
+
+[node name="DebugWorld" type="Node"]
+
+[node name="Monster" parent="." instance=ExtResource( 1 )]
+position = Vector2( 118, 94 )
+
+[node name="DebugControl" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 3 )
