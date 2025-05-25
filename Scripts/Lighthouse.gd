@@ -28,8 +28,10 @@ func enableRays():
 func followMonster(monsterPos: Vector2):
 	# set_cast_to uses relative coordinates from the lighthouse
 	var dispVec = monsterPos - position
-	lineOfSight.set_cast_to(dispVec.normalized() * rayLength)
+	var currCast = lineOfSight.get_cast_to()
+	var newCast = currCast.linear_interpolate(dispVec.normalized() * rayLength, 0.5)
 	
+	lineOfSight.set_cast_to(newCast)
 	# set_cast_to does not change rotation
-	rayLeft.set_cast_to(dispVec.normalized() * rayLength)
-	rayRight.set_cast_to(dispVec.normalized() * rayLength)
+	rayLeft.set_cast_to(newCast)
+	rayRight.set_cast_to(newCast)

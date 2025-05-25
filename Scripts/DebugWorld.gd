@@ -7,7 +7,7 @@ signal nextLevel
 onready var monster := $Monster
 # Should probably make an array of lighthouses when there are multiple
 # Something like all childs of some node being lighthouses?
-onready var lighthouses := [$Lighthouse, $Lighthouse2]
+onready var lighthouses := [$Lighthouse]
 onready var boats := [$Boat]
 
 var undetected := false
@@ -20,7 +20,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	lightFollow()
+	lightFollow(delta)
 	
 	# Check if boat has been eaten
 	for boat in boats:
@@ -32,7 +32,7 @@ func _physics_process(delta):
 				emit_signal("restartLevel")
 
 
-func lightFollow():
+func lightFollow(delta: float):
 	undetected = true
 	for lighthouse in lighthouses:
 		# Have lighthouse follow monster
@@ -47,4 +47,3 @@ func lightFollow():
 			if collider == monster:
 				lighthouse.monsterFound = true
 				undetected = false
-				
