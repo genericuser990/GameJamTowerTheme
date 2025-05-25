@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/icon.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Lighthouse.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Ray.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Lighthouse" type="StaticBody2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+ray = ExtResource( 3 )
 
 [node name="LighthouseSprite" type="Sprite" parent="."]
 scale = Vector2( 0.203125, 0.203125 )
@@ -24,3 +29,5 @@ rotation = 0.174533
 
 [node name="RayRight" type="RayCast2D" parent="."]
 rotation = -0.174533
+
+[node name="Rays" type="Node" parent="."]

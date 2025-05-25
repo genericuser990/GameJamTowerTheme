@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/LightSegment.gd" type="Script" id=1]
+
+[node name="LightSegment" type="Line2D"]
+points = PoolVector2Array( 0, 1, 0, -1 )
+width = 5.0
+default_color = Color( 0.670588, 0.666667, 0.458824, 1 )
+script = ExtResource( 1 )
