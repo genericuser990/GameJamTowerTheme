@@ -8,6 +8,8 @@ onready var rayRight := $RayRight
 export var rayLength := 100
 export var lightAngle := 30 # Maybe should have a better name for this
 
+var monsterFound := true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enableRays()
@@ -15,10 +17,10 @@ func _ready():
 	rayRight.set_rotation_degrees(-lightAngle / 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+# func _physics_process(delta):
 	# Check ray collision with bodies
-	if lineOfSight.is_colliding():
-		print("Is colliding")
+	# if lineOfSight.is_colliding():
+		# print("Is colliding")
 
 func enableRays():
 	lineOfSight.enabled = true
