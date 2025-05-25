@@ -52,10 +52,7 @@ func lightFollow():
 			if collider:
 				light.drawLine(lighthouse.position, collisionPoint)
 			else:
-				var dispVec = monster.position - lighthouse.position
-				var rayVec = dispVec.normalized() * lighthouse.rayLength
-				var globalPos = rayVec.rotated(PI/12) + lighthouse.position
-				light.drawLine(lighthouse.position, globalPos)
+				light.drawLine(lighthouse.position, ray.get_cast_to().rotated(PI/12) + lighthouse.position)
 				
 			lights.add_child(light)
 				
