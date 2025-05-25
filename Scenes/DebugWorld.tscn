@@ -14,12 +14,8 @@ script = ExtResource( 6 )
 [node name="Monster" parent="." instance=ExtResource( 1 )]
 position = Vector2( 123, 94 )
 
-[node name="Lighthouse2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 283, 145 )
-
 [node name="Lighthouse" parent="." instance=ExtResource( 5 )]
 position = Vector2( 154, 87 )
-rayLength = 200
 
 [node name="Rock" parent="." instance=ExtResource( 4 )]
 position = Vector2( 102, 54 )

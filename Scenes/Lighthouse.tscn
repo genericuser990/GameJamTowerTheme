@@ -24,6 +24,3 @@ rotation = 0.174533
 
 [node name="RayRight" type="RayCast2D" parent="."]
 rotation = -0.174533
-
-[node name="LightSource" type="Position2D" parent="."]
-position = Vector2( 0, -28 )
