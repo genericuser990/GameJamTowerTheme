@@ -32,7 +32,7 @@ func lightFollow():
 		lighthouse.updateMonsterFound(monster)
 		# If any lighthouse finds monster, it is detected
 		detected = detected or lighthouse.monsterFound
-				
+
 func eatBoat():
 	# Check if boat has been eaten
 	for boat in boats:
