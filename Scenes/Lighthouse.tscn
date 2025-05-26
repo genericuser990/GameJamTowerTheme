@@ -8,6 +8,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Lighthouse" type="StaticBody2D"]
+z_index = 5
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

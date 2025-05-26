@@ -11,6 +11,7 @@ extents = Vector2( 6, 2.25 )
 resource_name = "idle"
 
 [node name="Monster" type="KinematicBody2D"]
+z_index = 1
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
