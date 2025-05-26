@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var speed := 100
 var vel = Vector2.ZERO
 var screenSize
+onready var sprite = $TextureRect/MonsterSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +21,4 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 5, screenSize.x - 5)
 	position.y = clamp(position.y, 5, screenSize.y - 5)
 	
-	if (vel.x > 0):
-		$MonsterSprite.flip_h = false
-	elif (vel.x < 0):
-		$MonsterSprite.flip_h = true
+	sprite.manageSprite(vel, delta)
