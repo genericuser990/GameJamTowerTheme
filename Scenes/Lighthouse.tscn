@@ -16,6 +16,7 @@ __meta__ = {
 ray = ExtResource( 3 )
 
 [node name="WaterSplash" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 8 )
 
 [node name="LighthouseSprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
