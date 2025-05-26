@@ -5,7 +5,7 @@ extends Area2D
 # var a = 2
 # var b = "text"
 var amplitude = 0.005
-var period = 1
+var period = 3
 var time = 0
 var eaten := false
 
