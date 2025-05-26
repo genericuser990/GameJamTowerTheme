@@ -41,105 +41,52 @@ level = "res://Scenes/DebugWorld.tscn"
 [node name="LevelSelectButton2" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 20.0
 margin_right = 36.0
+level = "res://Scenes/DebugWorld.tscn"
+
+[node name="Label" parent="Panel/MarginContainer/GridContainer/LevelSelectButton2" index="0"]
+text = " 2"
 
 [node name="LevelSelectButton3" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 40.0
 margin_right = 56.0
+level = "res://Scenes/DebugWorld.tscn"
+
+[node name="Label" parent="Panel/MarginContainer/GridContainer/LevelSelectButton3" index="0"]
+text = " 3"
 
 [node name="LevelSelectButton4" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 60.0
 margin_right = 76.0
+level = "res://Scenes/DebugWorld.tscn"
+
+[node name="Label" parent="Panel/MarginContainer/GridContainer/LevelSelectButton4" index="0"]
+text = " 4"
 
 [node name="LevelSelectButton5" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 80.0
 margin_right = 96.0
+level = "res://Scenes/DebugWorld.tscn"
+
+[node name="Label" parent="Panel/MarginContainer/GridContainer/LevelSelectButton5" index="0"]
+text = " 5"
 
 [node name="LevelSelectButton6" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_top = 20.0
 margin_bottom = 36.0
 level = "res://Scenes/DebugWorld.tscn"
 
+[node name="Label" parent="Panel/MarginContainer/GridContainer/LevelSelectButton6" index="0"]
+text = " 6"
+
 [node name="LevelSelectButton7" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 36.0
 margin_bottom = 36.0
-
-[node name="LevelSelectButton8" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 40.0
-margin_top = 20.0
-margin_right = 56.0
-margin_bottom = 36.0
-
-[node name="LevelSelectButton9" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 60.0
-margin_top = 20.0
-margin_right = 76.0
-margin_bottom = 36.0
-
-[node name="LevelSelectButton10" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 80.0
-margin_top = 20.0
-margin_right = 96.0
-margin_bottom = 36.0
-
-[node name="LevelSelectButton11" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_top = 40.0
-margin_bottom = 56.0
 level = "res://Scenes/DebugWorld.tscn"
 
-[node name="LevelSelectButton12" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 20.0
-margin_top = 40.0
-margin_right = 36.0
-margin_bottom = 56.0
-
-[node name="LevelSelectButton13" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 40.0
-margin_top = 40.0
-margin_right = 56.0
-margin_bottom = 56.0
-
-[node name="LevelSelectButton14" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 60.0
-margin_top = 40.0
-margin_right = 76.0
-margin_bottom = 56.0
-
-[node name="LevelSelectButton15" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 80.0
-margin_top = 40.0
-margin_right = 96.0
-margin_bottom = 56.0
-
-[node name="LevelSelectButton16" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_top = 60.0
-margin_bottom = 76.0
-level = "res://Scenes/DebugWorld.tscn"
-
-[node name="LevelSelectButton17" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 20.0
-margin_top = 60.0
-margin_right = 36.0
-margin_bottom = 76.0
-
-[node name="LevelSelectButton18" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 40.0
-margin_top = 60.0
-margin_right = 56.0
-margin_bottom = 76.0
-
-[node name="LevelSelectButton19" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 60.0
-margin_top = 60.0
-margin_right = 76.0
-margin_bottom = 76.0
-
-[node name="LevelSelectButton20" parent="Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 80.0
-margin_top = 60.0
-margin_right = 96.0
-margin_bottom = 76.0
+[node name="Label" parent="Panel/MarginContainer/GridContainer/LevelSelectButton7" index="0"]
+text = " 7"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 31.0
@@ -155,3 +102,11 @@ texture = ExtResource( 6 )
 [node name="Rock3" type="Sprite" parent="."]
 position = Vector2( 56, 90 )
 texture = ExtResource( 4 )
+
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton"]
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton2"]
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton3"]
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton4"]
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton5"]
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton6"]
+[editable path="Panel/MarginContainer/GridContainer/LevelSelectButton7"]
