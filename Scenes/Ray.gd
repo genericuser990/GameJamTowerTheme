@@ -9,9 +9,10 @@ func _ready():
 	pass # Replace with function body.
 
 
-func face(cast: Vector2):
-	var dispVec = cast - position
-	set_cast_to(dispVec.rotated(angle).normalized() * length)
+func init():
+	set_cast_to(Vector2.DOWN * length)
+	rotate(deg2rad(angle))
+	enabled = true
 
 func drawLight(point1: Vector2, point2: Vector2):
 	var points = PoolVector2Array()
