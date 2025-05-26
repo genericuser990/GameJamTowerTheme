@@ -4,8 +4,8 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var amplitude = 0.005
-var period = 3
+var amplitude = 0.02
+var period = 0.5
 var time = 0
 var eaten := false
 

@@ -21,8 +21,11 @@ margin_right = 295.0
 margin_bottom = 166.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="Monster" parent="." instance=ExtResource( 1 )]
-position = Vector2( 123, 94 )
+[node name="Lighthouse3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 230, 83 )
+
+[node name="Lighthouse2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 78, 125 )
 
 [node name="Lighthouse" parent="." instance=ExtResource( 5 )]
 position = Vector2( 154, 87 )
@@ -39,5 +42,4 @@ __meta__ = {
 [node name="Boat" parent="." instance=ExtResource( 7 )]
 position = Vector2( 223, 42 )
 
-[node name="Lighthouse2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 230, 117 )
+[node name="Monster" parent="." instance=ExtResource( 1 )]
