@@ -7,7 +7,7 @@ export (PackedScene) var ray
 
 export var rayLength := 100
 export var lightAngle := 30 # Maybe should have a better name for this
-export var degPerRay = 1 # Higher quality when lower
+export var degPerRay = 2 # Higher quality when lower
 
 var monsterFound := true
 
