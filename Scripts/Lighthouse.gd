@@ -7,7 +7,7 @@ export (PackedScene) var ray
 
 export var rayLength := 100
 export var lightAngle := 30 # Maybe should have a better name for this
-export var degPerRay = 2 # Higher quality when lower
+export var degPerRay = 1 # Higher quality when lower
 
 var monsterFound := true
 
@@ -29,6 +29,7 @@ func createRays():
 		
 		currRay.init()
 		rays.add_child(currRay)
+		currRay.light.set_width(rayLength / 15)
 		
 
 func followMonster(monster: KinematicBody2D):
@@ -40,11 +41,15 @@ func followMonster(monster: KinematicBody2D):
 	for ray in rays.get_children():
 		ray.set_cast_to(newCast)
 		
-		if ray.get_collider():
+		var collider = ray.get_collider()
+		if collider:
 			# drawLight uses relative coordinates (I think)
 			# get_collision_point returns absolute coordinates
 			var relCollisionPos = (ray.get_collision_point() - position).rotated(-deg2rad(ray.angle))
-			ray.drawLight(Vector2.ZERO, relCollisionPos)
+			if collider == monster:
+				ray.drawLight(Vector2.ZERO, relCollisionPos.normalized() * rayLength)
+			else:
+				ray.drawLight(Vector2.ZERO, relCollisionPos)
 		else:
 			ray.drawLight(Vector2.ZERO, newCast)
 		
