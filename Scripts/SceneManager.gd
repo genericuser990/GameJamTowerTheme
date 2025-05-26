@@ -22,12 +22,13 @@ func setGUI(newSceneStr : String = ""):
 	add_child(currentGUIScene)
 
 func setScene(newSceneStr : String = ""):
+	print(newSceneStr)
 	if currentGameScene != null:
 		currentGameScene.queue_free()
 	
 	if (newSceneStr == ""):
 		return
-		
+	
 	var newGameScene = load(newSceneStr).instance()
 	currentGameScene = newGameScene
 	viewPort.add_child(currentGameScene)
