@@ -15,6 +15,7 @@ onready var burst := $plankBurst
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.connect("onPlayerWin", self, "getEaten")
+	connect("body_entered", self, "onObjectEnter")
 	pass # Replace with function body.
 
 
@@ -22,6 +23,10 @@ func _ready():
 func _physics_process(delta):
 	time += 1
 	position.x += sin(delta * period * time) * amplitude
+
+func onObjectEnter(object):
+	if object.name == "Monster":
+		getEaten()
 
 func getEaten():
 	sprite.visible = false
