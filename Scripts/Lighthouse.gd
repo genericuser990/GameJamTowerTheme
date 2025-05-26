@@ -1,9 +1,6 @@
 extends StaticBody2D
 
 
-onready var lineOfSight := $LineOfSight
-onready var rayLeft := $RayLeft
-onready var rayRight := $RayRight
 onready var rays := $Rays
 
 export (PackedScene) var ray
@@ -16,11 +13,6 @@ var monsterFound := true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	lineOfSight.enabled = true
-	rayLeft.enabled = true
-	rayRight.enabled = true
-	rayLeft.set_rotation_degrees(lightAngle / 2)
-	rayRight.set_rotation_degrees(-lightAngle / 2)
 	createRays()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,13 +34,8 @@ func createRays():
 func followMonster(monster: KinematicBody2D):
 	# set_cast_to uses relative coordinates from the lighthouse
 	var dispVec = monster.position - position
-	var currCast = lineOfSight.get_cast_to()
+	var currCast = monster.position
 	var newCast = dispVec.normalized() * rayLength
-	
-	lineOfSight.set_cast_to(newCast)
-	# set_cast_to does not change rotation
-	rayLeft.set_cast_to(newCast)
-	rayRight.set_cast_to(newCast)
 	
 	for ray in rays.get_children():
 		ray.set_cast_to(newCast)

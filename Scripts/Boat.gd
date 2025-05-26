@@ -14,7 +14,7 @@ onready var burst := $plankBurst
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.onPlayerWin.connect("onPlayerWin", self, "getEaten")
+	Global.connect("onPlayerWin", self, "getEaten")
 	pass # Replace with function body.
 
 
