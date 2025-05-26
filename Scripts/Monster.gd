@@ -19,3 +19,8 @@ func _physics_process(delta):
 	# Prevent moving offscreen
 	position.x = clamp(position.x, 5, screenSize.x - 5)
 	position.y = clamp(position.y, 5, screenSize.y - 5)
+	
+	if (vel.x > 0):
+		$MonsterSprite.flip_h = false
+	elif (vel.x < 0):
+		$MonsterSprite.flip_h = true
