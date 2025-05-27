@@ -21,6 +21,8 @@ custom_styles/panel = SubResource( 1 )
 
 [node name="Lighthouse3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 230, 83 )
+rayLength = 50
+lightAngle = 70
 
 [node name="Lighthouse2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 78, 125 )

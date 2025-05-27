@@ -13,4 +13,5 @@ func _ready():
 	button.connect("pressed", self, "onPlayButtonPressed")
 	
 func onPlayButtonPressed():
+	Global.audioManager.playSelect()
 	Global.sceneManager.setGUI(transitionScene)

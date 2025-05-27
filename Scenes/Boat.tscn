@@ -17,7 +17,6 @@ _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 278.919 ), 0.0, 0.0, 0, 0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.224302 ), 0.0, 0.0, 0, 0 ]
 
 [node name="Boat" type="Area2D"]
-position = Vector2( 24, 10 )
 script = ExtResource( 2 )
 
 [node name="WaterSplash" parent="." instance=ExtResource( 4 )]
@@ -46,3 +45,7 @@ angle_curve = SubResource( 2 )
 scale_amount = 2.0
 scale_amount_random = 0.42
 scale_amount_curve = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -1, 0 )
+zoom = Vector2( 0.5, 0.5 )
