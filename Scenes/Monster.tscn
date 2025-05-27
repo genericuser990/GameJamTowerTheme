@@ -131,7 +131,6 @@ tracks/1/keys = {
 resource_name = "idle"
 
 [node name="Monster" type="KinematicBody2D"]
-position = Vector2( 36, 17 )
 z_index = 1
 script = ExtResource( 2 )
 
