@@ -21,4 +21,11 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 5, screenSize.x - 5)
 	position.y = clamp(position.y, 5, screenSize.y - 5)
 	
-	sprite.manageSprite(vel, delta)
+	# flip sprite
+	if (vel.x > 0):
+		sprite.flip_h = false
+	elif (vel.x < 0):
+		sprite.flip_h = true
+
+	if Input.is_action_just_pressed("reset"):
+		Global.sceneManager.reloadCurrentScene()
