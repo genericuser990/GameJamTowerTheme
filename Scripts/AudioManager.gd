@@ -2,13 +2,13 @@ extends Node
 
 onready var eatBoatPlayer = $EatBoat
 onready var selectPlayer = $Select
-onready var titleSongPlayer = $TitleSong
+#onready var titleSongPlayer = $TitleSong
 
 var bgSong
 
 func _ready():
 	Global.setAudioManager(self)
-	setBgSong(titleSongPlayer)
+	#setBgSong(titleSongPlayer)
 
 func playSelect():
 	selectPlayer.playing = true
