@@ -6,6 +6,7 @@
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [node name="Ray" type="RayCast2D"]
+collide_with_areas = true
 script = ExtResource( 1 )
 
 [node name="Light" type="Line2D" parent="."]
