@@ -1,16 +1,12 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Sprites/moveableRock1.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/MoveableRock.gd" type="Script" id=2]
-=======
+
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/moveableRock1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/MoveableRock.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/BobOnWater.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/WaterSplash.tscn" type="PackedScene" id=4]
->>>>>>> Stashed changes
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 7 )
@@ -24,12 +20,11 @@ extents = Vector2( 8, 1 )
 [node name="MoveableRock" type="Area2D"]
 z_index = 2
 script = ExtResource( 2 )
-<<<<<<< Updated upstream
-=======
+
 
 [node name="WaterSplash" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 8 )
->>>>>>> Stashed changes
+
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1 )
@@ -39,7 +34,7 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftCollision"]
 position = Vector2( -9, 1 )
-<<<<<<< Updated upstream
+
 shape = SubResource( 3 )
 
 [node name="TopCollision" type="Area2D" parent="."]
@@ -58,26 +53,7 @@ shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightCollision"]
 position = Vector2( 9, 1 )
-=======
->>>>>>> Stashed changes
-shape = SubResource( 3 )
 
-[node name="TopCollision" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopCollision"]
-position = Vector2( 0, -7 )
-shape = SubResource( 2 )
-
-[node name="BottomCollision" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomCollision"]
-position = Vector2( 0, 9 )
-shape = SubResource( 2 )
-
-[node name="RightCollision" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightCollision"]
-position = Vector2( 9, 1 )
 shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]

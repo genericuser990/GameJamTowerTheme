@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Audio/blipSelect.wav" type="AudioStream" id=1]
 [ext_resource path="res://Audio/hitHurt.wav" type="AudioStream" id=2]
-[ext_resource path="res://Audio/Fresh air.wav" type="AudioStream" id=3]
 [ext_resource path="res://Scripts/AudioManager.gd" type="Script" id=4]
 
 [node name="AudioManager" type="Node"]
@@ -15,4 +14,3 @@ stream = ExtResource( 1 )
 stream = ExtResource( 2 )
 
 [node name="TitleSong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
