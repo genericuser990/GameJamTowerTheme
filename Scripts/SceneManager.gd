@@ -6,6 +6,7 @@ onready var GUI := $GUI
 onready var viewPort := $ViewportContainer/Viewport
 onready var animationPlayer = $AnimationPlayer
 var startScene = "res://Scenes/ui/StartScreen.tscn"
+var reloadSceneStr
 
 signal finishTransition
 
@@ -48,11 +49,16 @@ func setScene(newSceneStr : String = ""):
 	if (newSceneStr == ""):
 		return
 	
+	reloadSceneStr = newSceneStr
 	var newGameScene = load(newSceneStr).instance()
 	currentGameScene = newGameScene
 	viewPort.add_child(currentGameScene)
 
-
+func reloadCurrentScene():
+	currentGameScene.queue_free()
+	var newGameScene = load(reloadSceneStr).instance()
+	currentGameScene = newGameScene
+	viewPort.add_child(currentGameScene)
 
 func sceneTransitionFin():
 	emit_signal("finishTransition")
