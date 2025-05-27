@@ -34,21 +34,14 @@ func createRays():
 
 func spreadLight():
 	# set_cast_to uses relative coordinates from the lighthouse
-	#var dispVec = monsterPos - position
-	#var currCast = monster.position
 	var newCast = dirVector.normalized() * rayLength
 	for ray in rays.get_children():
 		ray.set_cast_to(newCast)
 		
-		var collider = ray.get_collider()
-		#Global.debugControl.label1.text = collider.name
-		if collider:
+		if ray.get_collider():
 			# drawLight uses relative coordinates (I think)
 			# get_collision_point returns absolute coordinates
 			var relCollisionPos = (ray.get_collision_point() - position).rotated(-deg2rad(ray.angle))
-			#if collider.name == "Monster":
-				#ray.drawLight(Vector2.ZERO, relCollisionPos.normalized() * rayLength)
-			#else:
 			ray.drawLight(Vector2.ZERO, relCollisionPos)
 		else:
 			ray.drawLight(Vector2.ZERO, newCast)

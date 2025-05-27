@@ -16,8 +16,6 @@ onready var camera := $Camera2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "onObjectEnter")
-	pass # Replace with function body.
-
 
 #rock back and forth
 func _physics_process(delta):
