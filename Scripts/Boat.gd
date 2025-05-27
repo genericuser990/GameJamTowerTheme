@@ -11,10 +11,10 @@ var eaten := false
 
 onready var sprite := $Boat1
 onready var burst := $plankBurst
+onready var camera := $Camera2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.connect("onPlayerWin", self, "getEaten")
 	connect("body_entered", self, "onObjectEnter")
 	pass # Replace with function body.
 
@@ -26,6 +26,7 @@ func _physics_process(delta):
 
 func onObjectEnter(object):
 	if object.name == "Monster":
+		Global.emit_signal("onPlayerWin", camera)
 		getEaten()
 
 func getEaten():

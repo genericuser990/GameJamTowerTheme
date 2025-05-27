@@ -2,30 +2,49 @@ extends Node
 
 var currentGUIScene
 var currentGameScene
+onready var GUI := $GUI
 onready var viewPort := $ViewportContainer/Viewport
+onready var animationPlayer = $AnimationPlayer
 var startScene = "res://Scenes/ui/StartScreen.tscn"
 
+signal finishTransition
+
+export var levels : PoolStringArray = [
+	"res://Scenes/DebugWorld.tscn"
+]
+
 func _ready():
-	setGUI(startScene)
+	var instance = load(startScene).instance()
+	currentGUIScene = instance
+	GUI.add_child(instance)
 	Global.setSceneManager(self)
 
-# use Global.sceneManager.setGUI in any script to change gui
+# sets control scene
 func setGUI(newSceneStr : String = ""):
+	#player scene transtion, pause func until done
+	animationPlayer.play("SceneTransition")
+	yield(self, "finishTransition")
+	
+	# set previouse to null
 	if currentGUIScene != null:
 		currentGUIScene.queue_free()
 	
+	# check if null
 	if (newSceneStr == ""):
 		return
 	
+	
 	var newGUIScene = load(newSceneStr).instance()
 	currentGUIScene = newGUIScene
-	add_child(currentGUIScene)
+	GUI.add_child(currentGUIScene)
 
+
+# sets gameplay scene
 func setScene(newSceneStr : String = ""):
-	print(newSceneStr)
+	# set previouse to null
 	if currentGameScene != null:
 		currentGameScene.queue_free()
-	
+	# check if null
 	if (newSceneStr == ""):
 		return
 	
@@ -33,3 +52,7 @@ func setScene(newSceneStr : String = ""):
 	currentGameScene = newGameScene
 	viewPort.add_child(currentGameScene)
 
+
+
+func sceneTransitionFin():
+	emit_signal("finishTransition")
