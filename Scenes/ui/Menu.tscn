@@ -95,6 +95,7 @@ text = " 5"
 [node name="LevelSelectButton6" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_top = 20.0
 margin_bottom = 36.0
+level = 6
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton6" index="0"]
 text = " 6"
