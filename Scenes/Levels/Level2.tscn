@@ -19,7 +19,7 @@ custom_styles/panel = SubResource( 1 )
 position = Vector2( 49, 49 )
 
 [node name="Boat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 106, 156 )
+position = Vector2( 142, 157 )
 
 [node name="Rock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 228, 56 )
