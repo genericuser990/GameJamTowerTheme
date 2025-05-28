@@ -15,9 +15,12 @@ export var levels : PoolStringArray = [
 ]
 
 func _ready():
+	# set scene
 	var instance = load(startScene).instance()
 	currentGUIScene = instance
 	GUI.add_child(instance)
+	
+	# inject self to global
 	Global.setSceneManager(self)
 
 # sets control scene
