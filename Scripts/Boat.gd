@@ -24,8 +24,15 @@ func _physics_process(delta):
 
 func onObjectEnter(object):
 	if object.name == "Monster":
-		Global.emit_signal("onPlayerWin", camera)
-		getEaten()
+		var eatable = true
+		var lighthouses = get_tree().get_nodes_in_group("lighthouses")
+		for l in lighthouses:
+			if l.isSeeMonster:
+				eatable = false
+		
+		if eatable:
+			Global.emit_signal("onPlayerWin", camera)
+			getEaten()
 
 func getEaten():
 	sprite.visible = false

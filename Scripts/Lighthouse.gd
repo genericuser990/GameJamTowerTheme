@@ -4,20 +4,21 @@ extends StaticBody2D
 onready var rays := $Rays
 export (PackedScene) var ray
 
-export var rayLength := 100
-export var lightAngle := 30 # Maybe should have a better name for this
+export var rayLength := 300
+export var lightAngle := 15 # Maybe should have a better name for this
 export var degPerRay = 1 # Higher quality when lower
 
 export var dirVector = Vector2.UP
+var isSeeMonster := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	add_to_group("lighthouses")
 	createRays()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta): 
-	updateMonsterFound()
+	updateIsSeeMonster()
 	spreadLight()
 
 func createRays():
@@ -30,7 +31,7 @@ func createRays():
 		
 		currRay.init()
 		rays.add_child(currRay)
-		currRay.light.set_width(rayLength / 15)
+		currRay.light.set_width(rayLength / 20)
 		currRay.add_exception(self)
 
 func spreadLight():
@@ -47,8 +48,10 @@ func spreadLight():
 		else:
 			ray.drawLight(Vector2.ZERO, newCast)
 	
-func updateMonsterFound():
+func updateIsSeeMonster():
+	isSeeMonster = false
 	for ray in rays.get_children():
 		if ray.get_collider():
 			if ray.get_collider().name == "Monster":
+				isSeeMonster = true
 				dirVector = ray.get_collider().position - position

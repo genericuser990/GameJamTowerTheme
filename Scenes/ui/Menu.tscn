@@ -58,10 +58,12 @@ margin_bottom = 130.0
 columns = 5
 
 [node name="LevelSelectButton" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
+level = 1
 
 [node name="LevelSelectButton2" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 20.0
 margin_right = 36.0
+level = 2
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton2" index="0"]
 text = " 2"
@@ -69,6 +71,7 @@ text = " 2"
 [node name="LevelSelectButton3" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 40.0
 margin_right = 56.0
+level = 3
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton3" index="0"]
 text = " 3"
@@ -76,6 +79,7 @@ text = " 3"
 [node name="LevelSelectButton4" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 60.0
 margin_right = 76.0
+level = 4
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton4" index="0"]
 text = " 4"
@@ -83,6 +87,7 @@ text = " 4"
 [node name="LevelSelectButton5" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 80.0
 margin_right = 96.0
+level = 5
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton5" index="0"]
 text = " 5"
@@ -90,6 +95,7 @@ text = " 5"
 [node name="LevelSelectButton6" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_top = 20.0
 margin_bottom = 36.0
+level = 6
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton6" index="0"]
 text = " 6"

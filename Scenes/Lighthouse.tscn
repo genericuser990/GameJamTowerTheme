@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.25, 4 )
 
-[node name="Lighthouse" type="StaticBody2D"]
+[node name="Lighthouse" type="StaticBody2D" groups=["lighthouses"]]
 z_index = 5
 script = ExtResource( 2 )
 __meta__ = {

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Boat.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Lighthouse.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.164706, 0.262745, 0.301961, 1 )
+
+[node name="Level4" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 30.0
+margin_top = 16.0
+margin_right = 295.0
+margin_bottom = 166.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Monster" parent="." instance=ExtResource( 3 )]
+position = Vector2( 281, 159 )
+
+[node name="Lighthouse" parent="." instance=ExtResource( 2 )]
+position = Vector2( 105, 104 )
+rayLength = 150
+lightAngle = 30
+
+[node name="Boat" parent="." instance=ExtResource( 1 )]
+position = Vector2( 103, 59 )
