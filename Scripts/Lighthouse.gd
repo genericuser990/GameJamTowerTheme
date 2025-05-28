@@ -9,15 +9,16 @@ export var lightAngle := 30 # Maybe should have a better name for this
 export var degPerRay = 1 # Higher quality when lower
 
 export var dirVector = Vector2.UP
+var isSeeMonster := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	add_to_group("lighthouses")
 	createRays()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta): 
-	updateMonsterFound()
+	updateIsSeeMonster()
 	spreadLight()
 
 func createRays():
@@ -47,8 +48,10 @@ func spreadLight():
 		else:
 			ray.drawLight(Vector2.ZERO, newCast)
 	
-func updateMonsterFound():
+func updateIsSeeMonster():
+	isSeeMonster = false
 	for ray in rays.get_children():
 		if ray.get_collider():
 			if ray.get_collider().name == "Monster":
+				isSeeMonster = true
 				dirVector = ray.get_collider().position - position
