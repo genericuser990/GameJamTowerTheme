@@ -71,6 +71,7 @@ text = " 2"
 [node name="LevelSelectButton3" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 40.0
 margin_right = 56.0
+level = 3
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton3" index="0"]
 text = " 3"
@@ -78,6 +79,7 @@ text = " 3"
 [node name="LevelSelectButton4" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
 margin_left = 60.0
 margin_right = 76.0
+level = 4
 
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton4" index="0"]
 text = " 4"
