@@ -12,7 +12,7 @@
 position = Vector2( 49, 49 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 106, 100 )
+position = Vector2( 124, 118 )
 
 [node name="Lighthouse" parent="." instance=ExtResource( 2 )]
 position = Vector2( 183, 88 )

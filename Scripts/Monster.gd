@@ -5,6 +5,7 @@ var vel = Vector2.ZERO
 var screenSize
 onready var sprite := $TextureRect/MonsterSprite
 onready var animation : AnimationPlayer = $AnimationPlayer
+onready var tween : Tween = $Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,6 +46,9 @@ func checkMoveBox(vel):
 		box.push(vel)
 		
 func eatBoat(cam):
+	#tween.interpolate_property(self, "position", position, cam.position, 1.2, Tween.TRANS_ELASTIC, Tween.EASE_IN)
+	#tween.start()
+	
 	if sprite.flip_h == true:
 		animation.play("eatLeft")
 	else:

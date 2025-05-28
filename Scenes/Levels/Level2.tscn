@@ -11,8 +11,8 @@
 [node name="Monster" parent="." instance=ExtResource( 3 )]
 position = Vector2( 49, 49 )
 
-[node name="Boat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 124, 113 )
+[node name="Boat2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 147, 127 )
 
 [node name="Rock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 228, 56 )
@@ -20,10 +20,7 @@ position = Vector2( 228, 56 )
 [node name="Lighthouse" parent="." instance=ExtResource( 4 )]
 position = Vector2( 183, 88 )
 lightAngle = 20
-dirVector = Vector2( -1, 1 )
-
-[node name="Boat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 128, 133 )
+dirVector = Vector2( -4, -1 )
 
 [node name="Bg" type="Sprite" parent="."]
 position = Vector2( 135, 75 )
