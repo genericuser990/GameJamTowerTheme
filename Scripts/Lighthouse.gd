@@ -31,7 +31,6 @@ func createRays():
 		
 		currRay.init()
 		rays.add_child(currRay)
-		currRay.light.set_width(rayLength / 20)
 		currRay.add_exception(self)
 
 func spreadLight():

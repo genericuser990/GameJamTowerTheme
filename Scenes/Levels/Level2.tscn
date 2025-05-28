@@ -11,6 +11,9 @@
 [node name="Monster" parent="." instance=ExtResource( 3 )]
 position = Vector2( 49, 49 )
 
+[node name="Boat" parent="." instance=ExtResource( 2 )]
+position = Vector2( 124, 113 )
+
 [node name="Rock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 228, 56 )
 

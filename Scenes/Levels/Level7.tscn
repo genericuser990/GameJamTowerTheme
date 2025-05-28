@@ -9,7 +9,7 @@
 [node name="Level7" type="Node"]
 
 [node name="Monster" parent="." instance=ExtResource( 2 )]
-position = Vector2( 62, 48 )
+position = Vector2( 62, 36 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
 position = Vector2( 215, 136 )
