@@ -11,7 +11,9 @@ var reloadSceneStr
 signal finishTransition
 
 export var levels : PoolStringArray = [
-	"res://Scenes/DebugWorld.tscn"
+	"res://Scenes/DebugWorld.tscn",
+	"res://Scenes/Levels/Level1.tscn",
+	"res://Scenes/Levels/Level2.tscn"
 ]
 
 func _ready():

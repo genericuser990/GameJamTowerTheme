@@ -4,8 +4,8 @@ extends StaticBody2D
 onready var rays := $Rays
 export (PackedScene) var ray
 
-export var rayLength := 100
-export var lightAngle := 30 # Maybe should have a better name for this
+export var rayLength := 300
+export var lightAngle := 15 # Maybe should have a better name for this
 export var degPerRay = 1 # Higher quality when lower
 
 export var dirVector = Vector2.UP
@@ -31,7 +31,7 @@ func createRays():
 		
 		currRay.init()
 		rays.add_child(currRay)
-		currRay.light.set_width(rayLength / 15)
+		currRay.light.set_width(rayLength / 20)
 		currRay.add_exception(self)
 
 func spreadLight():
