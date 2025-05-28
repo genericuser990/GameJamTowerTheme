@@ -9,8 +9,8 @@ onready var onButtonPlayer = $OnButton
 var currentSong
 
 func _ready():
-	currentSong = titleSongPlayer
-	currentSong.playing = true
+	#currentSong = titleSongPlayer
+	#currentSong.playing = true
 	Global.setAudioManager(self)
 
 func playSelect():
