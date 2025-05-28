@@ -11,7 +11,11 @@ export var transitionScene : String
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	button.connect("pressed", self, "onPlayButtonPressed")
+	button.connect("mouse_entered", self, "onMouseEnter")
 	
 func onPlayButtonPressed():
 	Global.audioManager.playSelect()
 	Global.sceneManager.setGUI(transitionScene)
+
+func onMouseEnter():
+	Global.audioManager.playOnButton()
