@@ -27,3 +27,6 @@ func _physics_process(delta):
 		if ratio >= 1:
 			isPan = false
 
+func resetCam():
+	position = Vector2(160,90)
+	zoom = Vector2(1,1)

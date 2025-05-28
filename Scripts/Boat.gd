@@ -16,6 +16,7 @@ onready var camera := $Camera2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "onObjectEnter")
+	Global.connect("onNextLevelTransition", self, "getEaten")
 
 #rock back and forth
 func _physics_process(delta):
@@ -32,7 +33,8 @@ func onObjectEnter(object):
 		
 		if eatable:
 			Global.emit_signal("onPlayerWin", camera)
-			getEaten()
+			Global.isPaused = true
+
 
 func getEaten():
 	sprite.visible = false

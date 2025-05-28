@@ -50,3 +50,15 @@ position = Vector2( 204, 137 )
 
 [node name="Box" parent="." instance=ExtResource( 8 )]
 position = Vector2( 133, 140 )
+
+[node name="Rock2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 310, 171 )
+
+[node name="Rock3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8, 172 )
+
+[node name="Rock4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 311, 8 )
+
+[node name="Rock5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8, 8 )

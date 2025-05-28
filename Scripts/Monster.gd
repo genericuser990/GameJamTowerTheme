@@ -3,10 +3,12 @@ extends KinematicBody2D
 export var speed := 100
 var vel = Vector2.ZERO
 var screenSize
-onready var sprite = $TextureRect/MonsterSprite
+onready var sprite := $TextureRect/MonsterSprite
+onready var animation : AnimationPlayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.connect("onPlayerWin", self, "eatBoat")
 	screenSize = get_viewport_rect().size
 
 
@@ -42,3 +44,12 @@ func checkMoveBox(vel):
 	if box:
 		box.push(vel)
 		
+func eatBoat(cam):
+	if sprite.flip_h == true:
+		animation.play("eatLeft")
+	else:
+		animation.play("eatRight")
+
+func onBoat():
+	Global.emit_signal("onNextLevelTransition")
+

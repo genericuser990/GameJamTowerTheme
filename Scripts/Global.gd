@@ -2,6 +2,7 @@ extends Node
 
 signal onPlayerWin
 signal onPlayerReset
+signal onNextLevelTransition
 
 var debugControl
 var sceneManager

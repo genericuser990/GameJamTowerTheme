@@ -1,19 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Boat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Lighthouse.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=4]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.164706, 0.262745, 0.301961, 1 )
+[ext_resource path="res://Sprites/bg.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=6]
 
 [node name="Level6" type="Node"]
-
-[node name="Panel" type="Panel" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
 
 [node name="Lighthouse" parent="." instance=ExtResource( 3 )]
 position = Vector2( 254, 94 )
@@ -24,11 +18,20 @@ position = Vector2( 100, 65 )
 dirVector = Vector2( 1, 1 )
 
 [node name="Monster" parent="." instance=ExtResource( 2 )]
-position = Vector2( 66, 98 )
+position = Vector2( 50, 62 )
+
+[node name="Rock" parent="." instance=ExtResource( 6 )]
+position = Vector2( 8, 19 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 176, 148 )
+position = Vector2( 171, 112 )
 
 [node name="Box" parent="." instance=ExtResource( 4 )]
-position = Vector2( 58, 128 )
+position = Vector2( 43, 116 )
 scale = Vector2( 1.1, 1.1 )
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 135, 75 )
+scale = Vector2( 270, 150 )
+z_index = -10
+texture = ExtResource( 5 )
