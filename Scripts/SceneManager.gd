@@ -15,7 +15,8 @@ export var levels : PoolStringArray = [
 	"res://Scenes/Levels/Level1.tscn",
 	"res://Scenes/Levels/Level2.tscn",
 	"res://Scenes/Levels/Level3.tscn",
-	"res://Scenes/Levels/Level4.tscn"
+	"res://Scenes/Levels/Level4.tscn",
+	"res://Scenes/Levels/Level5.tscn"
 ]
 
 func _ready():
