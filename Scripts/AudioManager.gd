@@ -9,8 +9,11 @@ onready var onButtonPlayer = $OnButton
 var currentSong
 
 func _ready():
-	#currentSong = titleSongPlayer
-	#currentSong.playing = true
+	gameSongPlayer.connect("finished", self, "loopSong")
+	titleSongPlayer.connect("finished", self, "loopSong")
+	
+	currentSong = titleSongPlayer
+	currentSong.playing = true
 	Global.setAudioManager(self)
 
 func playSelect():
@@ -22,8 +25,13 @@ func playEatBoat():
 func playOnButton():
 	onButtonPlayer.playing = true
 
-func setBgSong(newSong):
-	if currentSong != newSong:
-		currentSong.playing = false
-	currentSong = newSong
+func setBgSong(song):
+	currentSong.playing = false
+	if song == 0:
+		currentSong = titleSongPlayer
+	if song == 1:
+		currentSong = gameSongPlayer
+	currentSong.playing = true
+
+func loopSong():
 	currentSong.playing = true

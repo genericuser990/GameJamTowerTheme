@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Audio/blipSelect.wav" type="AudioStream" id=1]
 [ext_resource path="res://Audio/hitHurt.wav" type="AudioStream" id=2]
-[ext_resource path="res://Audio/Depth.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/Credits.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Scripts/AudioManager.gd" type="Script" id=4]
+[ext_resource path="res://Audio/Depth.mp3" type="AudioStream" id=5]
 [ext_resource path="res://Audio/click.wav" type="AudioStream" id=6]
 
 [node name="AudioManager" type="Node"]
@@ -16,9 +17,10 @@ stream = ExtResource( 6 )
 stream = ExtResource( 2 )
 
 [node name="TitleSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [node name="GameSong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource( 5 )
 
 [node name="OnButton" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
