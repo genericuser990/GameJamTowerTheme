@@ -17,17 +17,17 @@ custom_styles/panel = SubResource( 1 )
 
 [node name="Lighthouse" parent="." instance=ExtResource( 3 )]
 position = Vector2( 254, 94 )
-dirVector = Vector2( -1.2, 1 )
+dirVector = Vector2( -1.5, 0.5 )
 
 [node name="Lighthouse2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 100, 65 )
-dirVector = Vector2( 1, 1 )
+dirVector = Vector2( 1, 0.7 )
 
 [node name="Monster" parent="." instance=ExtResource( 2 )]
 position = Vector2( 66, 98 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 176, 148 )
+position = Vector2( 174, 113 )
 
 [node name="Box" parent="." instance=ExtResource( 4 )]
 position = Vector2( 58, 128 )

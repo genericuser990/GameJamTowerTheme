@@ -19,17 +19,18 @@ custom_styles/panel = SubResource( 1 )
 position = Vector2( 66, 98 )
 
 [node name="Lighthouse" parent="." instance=ExtResource( 4 )]
-position = Vector2( 239, 111 )
-lightAngle = 25
+position = Vector2( 210, 111 )
+lightAngle = 30
 dirVector = Vector2( -1, 0.2 )
 
 [node name="Lighthouse2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 173, 84 )
+position = Vector2( 145, 88 )
 rayLength = 115
-dirVector = Vector2( -0.5, 1 )
+lightAngle = 45
+dirVector = Vector2( 0.3, 1 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
 position = Vector2( 154, 117 )
 
 [node name="Rock" parent="." instance=ExtResource( 3 )]
-position = Vector2( 256, 82 )
+position = Vector2( 231, 76 )

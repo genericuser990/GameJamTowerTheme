@@ -19,7 +19,7 @@ custom_styles/panel = SubResource( 1 )
 position = Vector2( 49, 49 )
 
 [node name="Boat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 142, 157 )
+position = Vector2( 124, 113 )
 
 [node name="Rock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 228, 56 )
@@ -27,4 +27,4 @@ position = Vector2( 228, 56 )
 [node name="Lighthouse" parent="." instance=ExtResource( 4 )]
 position = Vector2( 183, 88 )
 lightAngle = 20
-dirVector = Vector2( -1, 1 )
+dirVector = Vector2( -1.8, 1 )
