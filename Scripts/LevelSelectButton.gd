@@ -1,6 +1,5 @@
 extends TextureButton
 
-#
 export var level : int = 0
 var levelScene
 
@@ -11,8 +10,9 @@ func _ready():
 
 func _on_LevelSelectButton_pressed():
 	Global.audioManager.playSelect()
+	Global.isPaused = false
 	Global.sceneManager.setScene(levelScene)
-	Global.sceneManager.setGUI()
+	Global.sceneManager.setGUI("res://Scenes/ui/Gameplay.tscn")
 	Global.audioManager.setBgSong(1)
 
 func onMouseEnter():

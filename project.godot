@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Control",
+"class": "SceneButton",
+"language": "GDScript",
+"path": "res://Scripts/SceneButton.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "boxClass",
 "language": "GDScript",
 "path": "res://Sprites/Box.gd"
 } ]
 _global_script_class_icons={
+"SceneButton": "",
 "boxClass": ""
 }
 

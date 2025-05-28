@@ -7,6 +7,8 @@ var debugControl
 var sceneManager
 var audioManager
 
+var isPaused := false
+
 func setDebugControl(a):
 	debugControl = a
 

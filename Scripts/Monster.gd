@@ -12,6 +12,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if Global.isPaused:
+		return
+	
 	vel.x = Input.get_axis("moveLeft", "moveRight")
 	vel.y = Input.get_axis("moveUp", "moveDown")
 	

@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/levelSelectButton/backButtonPressed.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/levelSelectButton/backButtonHover.png" type="Texture" id=2]
+[ext_resource path="res://ThemesFonts/menuTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Scripts/SceneButton.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/levelSelectButton/backButtonIdle.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/levelSelectButton/menuButtonHover.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/levelSelectButton/menuButtonPressed.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/levelSelectButton/menuButtonIdle.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/PauseableButton.gd" type="Script" id=9]
+
+[node name="PauseMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 149, -46 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.270588 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 19.0
+margin_bottom = 66.0
+theme = ExtResource( 3 )
+text = "Paused"
+align = 1
+valign = 1
+
+[node name="BackButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.0
+margin_top = -23.0
+margin_right = 34.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 9 )
+transitionScene = "res://Scenes/ui/Gameplay.tscn"
+transitionOn = false
+
+[node name="MenuButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.0
+margin_top = 25.0
+margin_right = 34.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 4 )
+transitionScene = "res://Scenes/ui/Menu.tscn"

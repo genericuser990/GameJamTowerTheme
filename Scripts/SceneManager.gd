@@ -24,10 +24,12 @@ func _ready():
 	Global.setSceneManager(self)
 
 # sets control scene
-func setGUI(newSceneStr : String = ""):
+func setGUI(newSceneStr : String = "", isTransition := true):
 	#player scene transtion, pause func until done
-	animationPlayer.play("SceneTransition")
-	yield(self, "finishTransition")
+	if isTransition:
+		animationPlayer.play("SceneTransition")
+		yield(self, "finishTransition")
+
 	
 	# set previouse to null
 	if currentGUIScene != null:
@@ -51,7 +53,6 @@ func setScene(newSceneStr : String = ""):
 	# check if null
 	if (newSceneStr == ""):
 		return
-	
 	reloadSceneStr = newSceneStr
 	var newGameScene = load(newSceneStr).instance()
 	currentGameScene = newGameScene
