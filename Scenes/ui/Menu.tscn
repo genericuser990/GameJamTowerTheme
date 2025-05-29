@@ -116,8 +116,20 @@ text = " 7"
 [node name="Rock" parent="ViewportContainer/Viewport" instance=ExtResource( 4 )]
 position = Vector2( 60, 105 )
 
+[node name="WaterSplash" parent="ViewportContainer/Viewport/Rock" index="0"]
+z_index = 0
+
+[node name="Sprite" parent="ViewportContainer/Viewport/Rock" index="1"]
+z_index = 1
+
 [node name="Rock2" parent="ViewportContainer/Viewport" instance=ExtResource( 4 )]
 position = Vector2( 261, 147 )
+
+[node name="WaterSplash" parent="ViewportContainer/Viewport/Rock2" index="0"]
+z_index = 0
+
+[node name="Sprite" parent="ViewportContainer/Viewport/Rock2" index="1"]
+z_index = 1
 
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton"]
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton2"]
@@ -126,3 +138,5 @@ position = Vector2( 261, 147 )
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton5"]
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton6"]
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton7"]
+[editable path="ViewportContainer/Viewport/Rock"]
+[editable path="ViewportContainer/Viewport/Rock2"]

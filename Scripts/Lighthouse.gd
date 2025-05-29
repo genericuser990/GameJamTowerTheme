@@ -43,7 +43,7 @@ func spreadLight():
 			# drawLight uses relative coordinates (I think)
 			# get_collision_point returns absolute coordinates
 			var relCollisionPos = (ray.get_collision_point() - position).rotated(-deg2rad(ray.angle))
-			ray.drawLight(Vector2.ZERO, relCollisionPos)
+			ray.drawLight(Vector2.ZERO, relCollisionPos - $RayPosition.position)
 		else:
 			ray.drawLight(Vector2.ZERO, newCast)
 	
