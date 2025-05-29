@@ -27,7 +27,7 @@ func createRays():
 		
 		currRay.length = rayLength
 		currRay.angle = -lightAngle / 2 + (i * degPerRay)
-		currRay.position = position
+		currRay.position = $RayPosition.global_position
 		
 		currRay.init()
 		rays.add_child(currRay)
