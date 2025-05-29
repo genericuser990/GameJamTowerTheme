@@ -26,9 +26,12 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GameJamTower"
+config/name="Lighthouse Depths"
+config/description="Game made in 1 week for the coco code gamejam #2 by genericUser990 and Shawn_with_a_w"
 run/main_scene="res://Scenes/SceneManager.tscn"
-config/icon="res://Sprites/icon.png"
+boot_splash/image="res://Sprites/titlescreen.png"
+boot_splash/bg_color=Color( 0.164706, 0.262745, 0.301961, 1 )
+config/icon="res://Sprites/iconSmall.png"
 
 [autoload]
 
@@ -38,6 +41,7 @@ Global="*res://Scripts/Global.gd"
 
 window/size/width=320
 window/size/height=180
+window/size/fullscreen=true
 window/size/test_width=960
 window/size/test_height=540
 window/stretch/mode="2d"

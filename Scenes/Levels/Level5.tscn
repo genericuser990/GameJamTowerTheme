@@ -26,7 +26,7 @@ lightAngle = 45
 dirVector = Vector2( 0.3, 1 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 167, 120 )
+position = Vector2( 157, 123 )
 
 [node name="Rock2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 9, 142 )
