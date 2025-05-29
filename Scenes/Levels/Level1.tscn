@@ -5,16 +5,16 @@
 [ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=4]
 
-[node name="Level1" type="Node"]
+[node name="Level1" type="YSort"]
 
 [node name="Monster" parent="." instance=ExtResource( 2 )]
 position = Vector2( 66, 98 )
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 215, 66 )
+position = Vector2( 208, 66 )
 
 [node name="Rock" parent="." instance=ExtResource( 3 )]
-position = Vector2( 233, 116 )
+position = Vector2( 233, 115 )
 
 [node name="Rock2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 51, 43 )

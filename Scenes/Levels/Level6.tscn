@@ -7,7 +7,7 @@
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=6]
 
-[node name="Level6" type="Node"]
+[node name="Level6" type="YSort"]
 
 [node name="Lighthouse" parent="." instance=ExtResource( 3 )]
 position = Vector2( 254, 94 )
