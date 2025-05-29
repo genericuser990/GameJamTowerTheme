@@ -26,12 +26,15 @@ func playOnButton():
 	onButtonPlayer.playing = true
 
 func setBgSong(song):
-	currentSong.playing = false
-	if song == 0:
+	if song == 0 && currentSong != titleSongPlayer:
+		currentSong.playing = false
 		currentSong = titleSongPlayer
-	if song == 1:
+		currentSong.playing = true
+	if song == 1 && currentSong != gameSongPlayer:
+		currentSong.playing = false
 		currentSong = gameSongPlayer
-	currentSong.playing = true
+		currentSong.playing = true
+	
 
 func loopSong():
 	currentSong.playing = true

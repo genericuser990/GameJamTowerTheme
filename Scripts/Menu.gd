@@ -1,5 +1,6 @@
 extends Control
 
 func _ready():
-	get_tree().call_group("levelSelectButtons", "unlock", Global.sceneManager.levelIndex)
+	Global.levelsCompleted = max(Global.levelsCompleted, Global.sceneManager.levelIndex)
+	get_tree().call_group("levelSelectButtons", "unlock", Global.levelsCompleted)
 

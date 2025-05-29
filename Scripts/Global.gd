@@ -8,6 +8,9 @@ var debugControl
 var sceneManager
 var audioManager
 
+#set in menu
+var levelsCompleted = 0
+
 var isPaused := false
 
 func setDebugControl(a):
