@@ -12,6 +12,8 @@ func _ready():
 func onPlayButtonPressed():
 	Global.audioManager.playSelect()
 	Global.sceneManager.setGUI(transitionScene, transitionOn)
+	if transitionOn:
+		Global.audioManager.setBgSong(0)
 
 func onMouseEnter():
 	Global.audioManager.playOnButton()

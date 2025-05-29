@@ -40,10 +40,10 @@ func setGUI(newSceneStr : String = "", isTransition := true):
 		animationPlayer.play("SceneTransition")
 		yield(self, "finishTransition")
 
-	
 	# set previouse to null
 	if currentGUIScene != null:
 		currentGUIScene.queue_free()
+		currentGUIScene = null
 	
 	# check if null
 	if (newSceneStr == ""):
@@ -57,10 +57,10 @@ func setGUI(newSceneStr : String = "", isTransition := true):
 
 # sets gameplay scene
 func setScene(newSceneIndex : int):
-	camera.resetCam()
 	# set previouse to null
 	if currentGameScene != null:
 		currentGameScene.queue_free()
+		currentGameScene = null
 	# check if null
 	if (newSceneIndex == -1):
 		return
@@ -72,6 +72,14 @@ func setScene(newSceneIndex : int):
 func setNextLevel():
 	animationPlayer.play("SceneTransition")
 	yield(self, "finishTransition")
+	camera.resetCam()
+	
+	# on final level complete send to menu
+	if levels.size() == levelIndex+1:
+		setGUI("res://Scenes/ui/Menu.tscn", false)
+		Global.audioManager.setBgSong(0)
+		setScene(-1)
+		return
 	setScene(levelIndex + 1)
 	Global.isPaused = false
 

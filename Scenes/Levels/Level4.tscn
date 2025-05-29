@@ -29,7 +29,6 @@ texture = ExtResource( 4 )
 position = Vector2( 56, 142 )
 
 [node name="Rock2" parent="." instance=ExtResource( 5 )]
-
 position = Vector2( 200, 57 )
 
 [node name="Bg" type="Sprite" parent="."]
@@ -37,4 +36,3 @@ position = Vector2( 135, 75 )
 scale = Vector2( 270, 150 )
 z_index = -10
 texture = ExtResource( 4 )
-
