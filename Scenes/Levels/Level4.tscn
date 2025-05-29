@@ -14,12 +14,13 @@ position = Vector2( 254, 140 )
 [node name="Lighthouse" parent="." instance=ExtResource( 2 )]
 position = Vector2( 105, 104 )
 rayLength = 150
+lightAngle = 20
 
 [node name="Boat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 103, 59 )
+position = Vector2( 103, 45 )
 
 [node name="Bg" type="Sprite" parent="."]
-position = Vector2( 135, 75 )
+position = Vector2( 135, 74 )
 scale = Vector2( 270, 150 )
 z_index = -10
 texture = ExtResource( 4 )
@@ -28,4 +29,4 @@ texture = ExtResource( 4 )
 position = Vector2( 56, 142 )
 
 [node name="Rock2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 226, 38 )
+position = Vector2( 200, 57 )
