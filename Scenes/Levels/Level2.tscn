@@ -11,6 +11,12 @@
 
 [node name="CPUParticles2D" parent="." instance=ExtResource( 6 )]
 
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 135, 75 )
+scale = Vector2( 270, 150 )
+z_index = -10
+texture = ExtResource( 5 )
+
 [node name="Monster" parent="." instance=ExtResource( 3 )]
 position = Vector2( 49, 49 )
 
@@ -30,9 +36,3 @@ position = Vector2( 7, 105 )
 
 [node name="Rock3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 76, 142 )
-
-[node name="Bg" type="Sprite" parent="."]
-position = Vector2( 135, 75 )
-scale = Vector2( 270, 150 )
-z_index = -10
-texture = ExtResource( 5 )

@@ -39,4 +39,5 @@ func onObjectEnter(object):
 func getEaten():
 	sprite.visible = false
 	burst.emitting = true
-	Global.audioManager.playEatBoat()
+	if Global.audioManager:
+		Global.audioManager.playEatBoat()
