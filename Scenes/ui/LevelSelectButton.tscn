@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/levelSelectButton/buttonPressed.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/levelSelectButton/buttonHover.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/levelSelectButton/buttonIdle.png" type="Texture" id=3]
 [ext_resource path="res://ThemesFonts/menuTheme.tres" type="Theme" id=4]
 [ext_resource path="res://Scripts/LevelSelectButton.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/levelSelectButton/buttonLocked.png" type="Texture" id=6]
 
 [node name="LevelSelectButton" type="TextureButton"]
 margin_right = 16.0
@@ -13,6 +14,11 @@ texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 2 )
 script = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="." groups=["levelSelectButtons"]]
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0

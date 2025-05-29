@@ -34,7 +34,7 @@ func _ready():
 	Global.connect("onNextLevelTransition", self, "setNextLevel")
 
 # sets control scene
-func setGUI(newSceneStr : String = "", isTransition := true):
+func setGUI(newSceneStr : String = "", isTransition := true):	
 	#player scene transtion, pause func until done
 	if isTransition:
 		animationPlayer.play("SceneTransition")
@@ -81,6 +81,7 @@ func setNextLevel():
 		setScene(-1)
 		return
 	setScene(levelIndex + 1)
+
 	Global.isPaused = false
 
 func reloadCurrentScene():
