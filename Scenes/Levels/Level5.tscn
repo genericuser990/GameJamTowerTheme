@@ -32,7 +32,7 @@ position = Vector2( 9, 142 )
 position = Vector2( 8, 47 )
 
 [node name="Rock" parent="." instance=ExtResource( 3 )]
-position = Vector2( 220, 49 )
+position = Vector2( 229, 75 )
 
 [node name="Bg" type="Sprite" parent="."]
 position = Vector2( 135, 75 )
