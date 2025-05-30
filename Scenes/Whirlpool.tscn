@@ -45,7 +45,9 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Whirlpool1"]
+z_index = -1
 frames = SubResource( 7 )
+frame = 3
 playing = true
 
 [node name="Whirlpool2" type="Area2D" parent="."]
@@ -58,5 +60,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Whirlpool2"]
+z_index = -1
 frames = SubResource( 7 )
+frame = 2
 playing = true
