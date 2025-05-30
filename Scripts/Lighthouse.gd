@@ -9,6 +9,7 @@ export var lightAngle := 15 # Maybe should have a better name for this
 export var degPerRay = 1 # Higher quality when lower
 
 export var dirVector = Vector2.UP
+export var lightOffset = Vector2(0, 6)
 var isSeeMonster := false
 
 # Called when the node enters the scene tree for the first time.
@@ -53,4 +54,4 @@ func updateIsSeeMonster():
 		if ray.get_collider():
 			if ray.get_collider().name == "Monster":
 				isSeeMonster = true
-				dirVector = ray.get_collider().position - position
+				dirVector = ray.get_collider().position + lightOffset - position
