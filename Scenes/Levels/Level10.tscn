@@ -48,14 +48,8 @@ scale = Vector2( 1.1875, 1.125 )
 [node name="Whirlpool1" parent="WhirlpoolPair" index="0"]
 position = Vector2( 69, 47 )
 
-[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool1" index="1"]
-frame = 1
-
 [node name="Whirlpool2" parent="WhirlpoolPair" index="1"]
 position = Vector2( 211, 46 )
-
-[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool2" index="1"]
-frame = 0
 
 [node name="Lighthouse" parent="." instance=ExtResource( 7 )]
 position = Vector2( 7, 15 )
