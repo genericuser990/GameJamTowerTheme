@@ -12,6 +12,7 @@
 
 [node name="Lighthouse3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 262, 16 )
+lightAngle = 20
 dirVector = Vector2( -10, 1 )
 
 [node name="CPUParticles2D" parent="." instance=ExtResource( 1 )]
@@ -21,6 +22,9 @@ position = Vector2( 135, 75 )
 scale = Vector2( 270, 150 )
 z_index = -10
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Monster" parent="." instance=ExtResource( 4 )]
 position = Vector2( 39, 37 )
@@ -33,26 +37,21 @@ position = Vector2( 156, 76 )
 [node name="Whirlpool1" parent="WhirlpoolPair" index="0"]
 position = Vector2( 69, 47 )
 
-[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool1" index="1"]
-frame = 1
-
 [node name="Whirlpool2" parent="WhirlpoolPair" index="1"]
 position = Vector2( 211, 46 )
 
-[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool2" index="1"]
-frame = 0
-
 [node name="Lighthouse" parent="." instance=ExtResource( 6 )]
 position = Vector2( 7, 15 )
+lightAngle = 20
 dirVector = Vector2( 1, 1 )
 
 [node name="Boat" parent="." instance=ExtResource( 5 )]
-position = Vector2( 200, 108 )
+position = Vector2( 154, 122 )
 
 [node name="Lighthouse2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 199, 141 )
-rayLength = 40
-lightAngle = 360
-degPerRay = 2
+position = Vector2( 177, 135 )
+rayLength = 100
+lightAngle = 180
+dirVector = Vector2( -0.4, -1 )
 
 [editable path="WhirlpoolPair"]
