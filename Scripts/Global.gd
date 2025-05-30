@@ -4,6 +4,9 @@ signal onPlayerWin
 signal onPlayerReset
 signal onNextLevelTransition
 
+signal whirlpoolEntered
+signal whirlpoolExited
+
 var debugControl
 var sceneManager : SceneManager
 var audioManager
