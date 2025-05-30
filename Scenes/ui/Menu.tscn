@@ -123,6 +123,26 @@ level = 8
 [node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton8" index="1"]
 text = " 8"
 
+[node name="LevelSelectButton9" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
+margin_left = 60.0
+margin_top = 20.0
+margin_right = 76.0
+margin_bottom = 36.0
+level = 9
+
+[node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton9" index="1"]
+text = " 9"
+
+[node name="LevelSelectButton10" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer" instance=ExtResource( 1 )]
+margin_left = 80.0
+margin_top = 20.0
+margin_right = 96.0
+margin_bottom = 36.0
+level = 10
+
+[node name="Label" parent="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton10" index="1"]
+text = " 10"
+
 [node name="Rock" parent="ViewportContainer/Viewport" instance=ExtResource( 4 )]
 position = Vector2( 60, 105 )
 
@@ -149,5 +169,7 @@ z_index = 1
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton6"]
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton7"]
 [editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton8"]
+[editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton9"]
+[editable path="ViewportContainer/Viewport/Panel/MarginContainer/GridContainer/LevelSelectButton10"]
 [editable path="ViewportContainer/Viewport/Rock"]
 [editable path="ViewportContainer/Viewport/Rock2"]

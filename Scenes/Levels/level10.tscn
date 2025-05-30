@@ -32,13 +32,30 @@ position = Vector2( 39, 37 )
 [node name="Box" parent="." instance=ExtResource( 8 )]
 position = Vector2( 156, 76 )
 
+[node name="CollisionShape2D" parent="Box" index="0"]
+position = Vector2( 2, -7.1875 )
+
+[node name="TextureRect" parent="Box" index="1"]
+margin_top = -18.0
+margin_right = 11.0
+
+[node name="MoveableRock1" parent="Box/TextureRect" index="0"]
+position = Vector2( 10, 9 )
+scale = Vector2( 1.1875, 1.125 )
+
 [node name="WhirlpoolPair" parent="." instance=ExtResource( 7 )]
 
 [node name="Whirlpool1" parent="WhirlpoolPair" index="0"]
 position = Vector2( 69, 47 )
 
+[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool1" index="1"]
+frame = 2
+
 [node name="Whirlpool2" parent="WhirlpoolPair" index="1"]
 position = Vector2( 211, 46 )
+
+[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool2" index="1"]
+frame = 1
 
 [node name="Lighthouse" parent="." instance=ExtResource( 6 )]
 position = Vector2( 7, 15 )
@@ -46,7 +63,7 @@ lightAngle = 20
 dirVector = Vector2( 1, 1 )
 
 [node name="Boat" parent="." instance=ExtResource( 5 )]
-position = Vector2( 154, 122 )
+position = Vector2( 153, 141 )
 
 [node name="Lighthouse2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 177, 135 )
@@ -54,4 +71,5 @@ rayLength = 100
 lightAngle = 180
 dirVector = Vector2( -0.4, -1 )
 
+[editable path="Box"]
 [editable path="WhirlpoolPair"]
