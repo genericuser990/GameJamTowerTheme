@@ -11,16 +11,21 @@ export var degPerRay = 1 # Higher quality when lower
 export var dirVector = Vector2.UP
 export var lightOffset = Vector2(0, 6)
 var isSeeMonster := false
+var isSearchMonster := true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("lighthouses")
 	createRays()
+	Global.connect("whirlpoolEntered", self, "onWhirlpoolEntered")
+	Global.connect("whirlpoolExited", self, "onWhirlpoolExited")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta): 
-	updateIsSeeMonster()
-	spreadLight()
+func _physics_process(delta):
+	if isSearchMonster:
+		updateIsSeeMonster()
+		spreadLight()
 
 func createRays():
 	for i in (lightAngle / degPerRay + 1):
@@ -55,3 +60,9 @@ func updateIsSeeMonster():
 			if ray.get_collider().name == "Monster":
 				isSeeMonster = true
 				dirVector = ray.get_collider().position + lightOffset - position
+
+func onWhirlpoolEntered():
+	isSearchMonster = false
+	
+func onWhirlpoolExited():
+	isSearchMonster = true

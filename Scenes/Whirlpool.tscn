@@ -47,7 +47,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Whirlpool1"]
 z_index = -2
 frames = SubResource( 7 )
-frame = 3
 playing = true
 
 [node name="Whirlpool2" type="Area2D" parent="."]
