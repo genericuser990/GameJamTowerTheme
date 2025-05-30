@@ -5,7 +5,7 @@ signal onPlayerReset
 signal onNextLevelTransition
 
 var debugControl
-var sceneManager
+var sceneManager : SceneManager
 var audioManager
 
 #set in menu
