@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/SceneButton.gd"
 }, {
-"base": "Node",
-"class": "SceneManager",
-"language": "GDScript",
-"path": "res://Scripts/SceneManager.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "boxClass",
 "language": "GDScript",
@@ -26,7 +21,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "SceneButton": "",
-"SceneManager": "",
 "boxClass": ""
 }
 
