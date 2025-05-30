@@ -5,6 +5,7 @@ onready var selectPlayer = $Select
 onready var titleSongPlayer = $TitleSong
 onready var gameSongPlayer = $GameSong
 onready var onButtonPlayer = $OnButton
+onready var onWhirlPoolPlayer = $OnWhirlPool
 
 var currentSong
 
@@ -24,6 +25,9 @@ func playEatBoat():
 	
 func playOnButton():
 	onButtonPlayer.playing = true
+
+func playOnWhirlPool():
+	onWhirlPoolPlayer.playing = true
 
 func setBgSong(song):
 	if song == 0 && currentSong != titleSongPlayer:

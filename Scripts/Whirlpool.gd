@@ -17,6 +17,7 @@ func _ready():
 
 func onEnterWhirlpool1(body):
 	if body.name == "Monster" and isTeleported == false:
+		Global.audioManager.playOnWhirlPool()
 		body.set_position(whirlpool2.get_global_position())
 		isTeleported = true
 	
