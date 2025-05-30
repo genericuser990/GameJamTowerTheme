@@ -11,13 +11,13 @@
 [node name="Level9" type="YSort"]
 
 [node name="Monster" parent="." instance=ExtResource( 3 )]
-position = Vector2( 66, 98 )
+position = Vector2( 44, 120 )
 
 [node name="Boat" parent="." instance=ExtResource( 5 )]
-position = Vector2( 208, 66 )
+position = Vector2( 181, 77 )
 
 [node name="Rock2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 35, 41 )
+position = Vector2( 9, 149 )
 
 [node name="Bg" type="Sprite" parent="."]
 position = Vector2( 135, 75 )
@@ -30,17 +30,31 @@ __meta__ = {
 
 [node name="WaveParticles" parent="." instance=ExtResource( 2 )]
 
-[node name="Lighthouse" parent="." instance=ExtResource( 6 )]
-position = Vector2( 103, 74 )
+[node name="Lighthouse3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 122, 116 )
 lightAngle = 30
+dirVector = Vector2( 0, 1 )
+
+[node name="Lighthouse" parent="." instance=ExtResource( 6 )]
+position = Vector2( 81, 33 )
+lightAngle = 30
+dirVector = Vector2( -1, 0 )
+
+[node name="Lighthouse4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 244, 51 )
+rayLength = 150
+lightAngle = 30
+dirVector = Vector2( -1, 0.5 )
+
+[node name="Lighthouse2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 140, 39 )
+lightAngle = 30
+dirVector = Vector2( 1, 1 )
 
 [node name="WhirlpoolPair" parent="." instance=ExtResource( 7 )]
 
 [node name="Whirlpool1" parent="WhirlpoolPair" index="0"]
 position = Vector2( 122, 128 )
-
-[node name="AnimatedSprite" parent="WhirlpoolPair/Whirlpool1" index="1"]
-frame = 2
 
 [node name="Whirlpool2" parent="WhirlpoolPair" index="1"]
 position = Vector2( 9, 24 )
