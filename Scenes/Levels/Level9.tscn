@@ -41,7 +41,7 @@ lightAngle = 30
 dirVector = Vector2( -1, 0 )
 
 [node name="Lighthouse4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 244, 51 )
+position = Vector2( 233, 42 )
 rayLength = 150
 lightAngle = 30
 dirVector = Vector2( -1, 0.5 )
