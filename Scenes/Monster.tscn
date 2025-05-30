@@ -149,9 +149,8 @@ anims/idle = SubResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -8.0
-margin_top = -14.0
+margin_top = -16.0
 margin_right = 7.99999
-margin_bottom = 2.0
 rect_clip_content = true
 
 [node name="MonsterSprite" type="Sprite" parent="TextureRect"]
@@ -163,5 +162,3 @@ script = ExtResource( 3 )
 
 [node name="WaterSplash" parent="." instance=ExtResource( 4 )]
 isMoving = true
-
-[node name="Tween" type="Tween" parent="."]

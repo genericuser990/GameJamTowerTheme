@@ -1,22 +1,22 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/waveParticles.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Rock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/waveParticles.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Lighthouse.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Boat.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/bg.png" type="Texture" id=7]
 
 [node name="YSort" type="YSort"]
 
-[node name="CPUParticles2D" parent="." instance=ExtResource( 1 )]
+[node name="CPUParticles2D" parent="." instance=ExtResource( 4 )]
 
 [node name="Bg" type="Sprite" parent="."]
 position = Vector2( 135, 75 )
 scale = Vector2( 270, 150 )
 z_index = -10
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 
 [node name="Boat" parent="." instance=ExtResource( 6 )]
 position = Vector2( 174, 86 )
@@ -28,17 +28,17 @@ lightAngle = 360
 degPerRay = 4
 dirVector = Vector2( 0, 1 )
 
-[node name="Box" parent="." instance=ExtResource( 7 )]
+[node name="Box" parent="." instance=ExtResource( 2 )]
 position = Vector2( 150, 119 )
 
 [node name="Lighthouse2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 7, 150 )
 dirVector = Vector2( 10, -1 )
 
-[node name="Monster" parent="." instance=ExtResource( 4 )]
+[node name="Monster" parent="." instance=ExtResource( 3 )]
 position = Vector2( 65, 39 )
 
-[node name="Rock5" parent="." instance=ExtResource( 3 )]
+[node name="Rock5" parent="." instance=ExtResource( 1 )]
 position = Vector2( 238, 131 )
 
 [node name="Lighthouse3" parent="." instance=ExtResource( 5 )]
@@ -46,17 +46,17 @@ position = Vector2( 260, 15 )
 dirVector = Vector2( -1, 1 )
 
 [node name="Lighthouse4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 174, 137 )
+position = Vector2( 173, 125 )
 rayLength = 50
 lightAngle = 360
 degPerRay = 4
 dirVector = Vector2( 0, 1 )
 
-[node name="Box2" parent="." instance=ExtResource( 7 )]
+[node name="Box2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 125, 71 )
 
-[node name="Rock2" parent="." instance=ExtResource( 3 )]
+[node name="Rock2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 238, 115 )
 
-[node name="Rock" parent="." instance=ExtResource( 3 )]
+[node name="Rock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 233, 123 )

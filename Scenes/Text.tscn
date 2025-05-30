@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ThemesFonts/menuTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/TextBobOnWater.gd" type="Script" id=2]
+
+[node name="Text" type="Label"]
+margin_left = 99.0
+margin_top = 127.0
+margin_right = 247.0
+margin_bottom = 141.0
+theme = ExtResource( 1 )
+text = "Time   for   a   late   night   snack..."
+script = ExtResource( 2 )
+period = 2
