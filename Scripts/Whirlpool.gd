@@ -18,15 +18,17 @@ func _ready():
 func onEnterWhirlpool1(body):
 	if body.name == "Monster" and isTeleported == false:
 		Global.emit_signal("whirlpoolEntered")		
-		Global.audioManager.playOnWhirlPool()
+		if Global.audioManger:
+			Global.audioManager.playOnWhirlPool()
 		body.set_position(whirlpool2.get_global_position())
 		isTeleported = true
 	
 	
 func onEnterWhirlpool2(body):
 	if body.name == "Monster" and isTeleported == false:
-		Global.emit_signal("whirlpoolEntered")				
-		Global.audioManager.playOnWhirlPool()		
+		Global.emit_signal("whirlpoolEntered")
+		if Global.audioManager:	
+			Global.audioManager.playOnWhirlPool()		
 		body.set_position(whirlpool1.get_global_position())
 		isTeleported = true
 		
